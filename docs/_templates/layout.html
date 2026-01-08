@@ -1,6 +1,8 @@
 ---
-title: {{ meta.title[0] if meta.title }}
-description: {{ meta.description[0] if meta.description }}
+# Jekyll front-matter populated from Sphinx `meta` when available.
+# Use safe defaults when `meta` or its fields are missing to avoid rendering errors.
+title: "{{ meta.title[0] if meta is defined and meta.title else '' }}"
+description: "{{ meta.description[0] if meta is defined and meta.description else '' }}"
 ---
 
 {% extends "!layout.html" %}
