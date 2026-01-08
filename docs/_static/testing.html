@@ -1,0 +1,20 @@
+---
+layout: default
+title: Trang HTML mẫu
+---
+
+<h1>Trang HTML mẫu có hỗ trợ Jekyll</h1>
+
+<p>Đây là một file <code>.html</code> có <strong>front matter</strong>, nên Jekyll sẽ build và áp layout.</p>
+
+<div class="content-box">
+  <h2>Nội dung trong file</h2>
+  <p>Bạn có thể viết HTML như bình thường ở đây.</p>
+</div>
+
+{% raw %}
+<nav>
+  <a href="{{ site.baseurl }}/">Trang chủ</a> |
+  <a href="{{ site.baseurl }}/about">Giới thiệu</a>
+</nav>
+{% endraw %}

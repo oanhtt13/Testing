@@ -1,0 +1,37 @@
+# Site settings
+title: My Website
+description: Sample site running on GitHub Pages
+author: Your Name
+
+# URL settings
+# Nếu repo dạng: username.github.io → baseurl để trống
+# Nếu repo dạng: username.github.io/myrepo → baseurl phải có /myrepo
+url: "https://username.github.io"
+baseurl: "/myrepo"
+
+# Theme
+theme: jekyll-theme-cayman
+# theme: minima
+# theme: jekyll-theme-slate
+# theme: jekyll-theme-midnight
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Optional settings
+show_downloads: false
+timezone: Asia/Ho_Chi_Minh
+
+# Exclude folders/files from build
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+
+# Permalink format (đẹp chuẩn SEO)
+permalink: /:title/
