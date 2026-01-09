@@ -6,11 +6,11 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'ROGO ESP32 WILE SDK'
+project = 'Medical Costs'
 copyright = 'workshop participant'
 author = 'workshop participant'
 release = '0.1'
-esp32c3 = 1
+# esp32c3 = 1
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
