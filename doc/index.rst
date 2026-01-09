@@ -10,6 +10,13 @@ Welcome to Medical Costs documentation!
    :maxdepth: 5
    :caption: Contents:
 
+   aler3.rst
+   Crawler.rst
+   introduction.rst
+   RecordofChange.rst
+   selectiveComment.rst
+   supportAllowance.rst
+   supportSystem.rst
    Get_started.md
    linux_mac_install.rst
    wile_project_start.md
