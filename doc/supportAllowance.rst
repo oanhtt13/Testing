@@ -13,7 +13,7 @@ Mục đích
 Hệ thống hỗ trợ
 -----------------------
 
-``Google Sheet:`` Trang quản lý  1 clinic. Khách hàng cung cấp.
+:ref:`Google-Sheet-lable`: Trang quản lý  1 clinic. Khách hàng cung cấp.
 
 
 Logic tinh CSF
@@ -81,6 +81,7 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Thông tin cột ``包括的支援加算`` của trang Google Sheet được cập nhật.
    * - Postconditions
      - Các bệnh nhân đủ điều kiện 2 được update trạng thái mới (``tbl_record``)
+
        Update selective comment cho các trường hợp bệnh nhân đó.
 
 
@@ -94,9 +95,9 @@ FR-Selective_Comment-1: Implementing Selective Comment
    * - Content
      - Explain
    * - Description
-     - Ho tro chuc nang nhap comment dang lua chon cho nguoi dung duoi cac dieu kien lien quan den Phí Hỗ trợ Toàn diện.
+     - Hỗ trợ chức năng nhập comment dạng lựa chọn cho người dùng dành cho các loại phí.
    * - Input
-     - Thong tin trong bang ``tbl_item``
+     - Thông tin trong bảng ``tbl_item``
    * - Output
      - Giao diện nhập comment dạng lựa chọn cho người dùng.
    * - Trigger
