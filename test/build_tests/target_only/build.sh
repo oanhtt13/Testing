@@ -1,1 +1,0 @@
-build-docs --project-path src -t esp32 esp32s2 -bs latex html

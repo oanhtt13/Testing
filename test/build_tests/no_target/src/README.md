@@ -1,1 +1,0 @@
-# Dummy project for showing doxygen integration
