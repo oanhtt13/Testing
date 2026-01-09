@@ -13,7 +13,7 @@ Mục đích
 Hệ thống hỗ trợ
 -----------------------
 
-:ref:`Google-Sheet-lable`: Trang quản lý  1 clinic. Khách hàng cung cấp. Tham khảo tại: :doc:`supportSystem.rst`.
+:ref:`Google-Sheet-lable`: Trang quản lý  1 clinic. Khách hàng cung cấp. Tham khảo tại: :doc:`supportSystem`.
 
 
 Logic tinh CSF
