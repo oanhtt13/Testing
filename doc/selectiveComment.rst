@@ -61,7 +61,7 @@ FR-Comment_Handel-1: Generate_comment
      - Lấy thông tin thành công
    * - 3. Kiểm tra các loại phí bệnh nhân cần chi trả
      - Kiểm tra các loại phí bệnh nhân cần chi trả, encoder phí sang code tương ứng
-     -
+     - None
    * - 4. Kiểm tra phí có nhiều loại comment hay không
      - Kiểm tra cột ``need_condition`` của file ``csv`` để lấy thông tin
 
@@ -86,10 +86,23 @@ FR-Comment_Handel-1: Generate_comment
 
        **Nếu:**
 
-       Bệnh nhân có thông tin liên quan giống với thông tin trong ``condition`` thì sẽ gen comment theo cột ``comment`` tương ứng
+       Kiểm tra điều kiện trả về ``True``
+
+       **Thì:**
+
+       Gen comment theo cột ``comment`` tương ứng
      - Gen comment
-   * - 5. Hoàn thiện comment
-     - hgh
-     - Tạo comment dạng text theo form
+   * - 5. Kiểm tra độ ưu tiên
+     - Kiểm tra cột ``priority`` trong bảng ``mst_fee_comment``
+
+       **Nếu:**
+
+       Comment nào có giá trị tại cột ``priority`` thấp nhất nhất
+
+       **Thì:**
+       Comment đó được giữ lại
+     - Giữ lại comment
+   * - 6. Gen comment
+     - 
 
 
