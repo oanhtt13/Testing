@@ -22,7 +22,7 @@ Example: `Google Sheet Sample`_
 
 .. list-table:: **Main Flow**
    :header-rows: 1
-   :widths: 30 80 50 30
+   :widths: 20 50 30 10
 
    * - Đề mục
      - Dịch
