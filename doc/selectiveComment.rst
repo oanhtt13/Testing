@@ -30,9 +30,10 @@ FR-Comment_Handel-1: Generate_comment
 
        Lưu thông tin vào database
    * - Input
-     - Database
+     - Database: ``mst_fee_comment``
 
        Danh sách bệnh nhân và các loại phí bệnh nhân cần phải chi trả
+
    * - Output
      - None
    * - Trigger
@@ -40,7 +41,7 @@ FR-Comment_Handel-1: Generate_comment
    * - Preconditions
      - Thông tin tại bảng ``mst_fee_comment`` phải được cập nhật
 
-       Thông tin tại bảng được đọc thành công và lưu lại vào file ``/tmp/data/master_data/mst_fee_comments.csv``
+       Thông tin tại bảng trên được đọc thành công và lưu lại vào file ``/tmp/data/master_data/mst_fee_comments.csv``
    * - Postconditions
      - Comment tương ứng phải được cập nhật trên database, tại bảng ``tbl_record``
 
