@@ -48,7 +48,7 @@ FR-Comment_Handel-1: Generate_comment
      - Comment tương ứng phải được cập nhật trên database, tại bảng ``tbl_record``
 
 
-.. list-table:: **Main Flow**
+.. list-table:: **Business Flow**
    :header-rows: 1
    :widths: 20 30 50
 
@@ -69,7 +69,7 @@ FR-Comment_Handel-1: Generate_comment
 
        **Nếu:**
 
-       need_condition = :red:`no`
+       need_condition = ``no``
 
        **Thì:**
 
@@ -77,14 +77,14 @@ FR-Comment_Handel-1: Generate_comment
 
        **Nếu:**
 
-       need_condition = :red:`yes`
+       need_condition = ``yes``
      
        **Thì:**
 
        Kiểm tra cột ``condition`` rồi sang bước 4.1
      - Lấy thành công thông tin
    * - 4.1 Kiểm tra điều kiện generate comment
-     - Kiểm tra cột ``condition``
+     - Kiểm tra cột ``condition`` trong file ``csv``
 
        **Nếu:**
 
@@ -111,5 +111,4 @@ FR-Comment_Handel-1: Generate_comment
        **Thì:**
 
        Comment đó được giữ lại có priotiry thấp nhất
-
      - Mỗi bệnh nhân chỉ có 1 comment
