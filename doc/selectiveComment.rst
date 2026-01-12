@@ -57,7 +57,9 @@ FR-Comment_Handel-1: Generate_comment
      - Acception
    * - 1. Cung cấp danh sách bệnh nhân kèm các loại phí
      - Nhập vào dataframe chứa thông tin danh sách bệnh nhân
-     - Danh sách chứa thông tin ``patient_id``, ``record_id``, ``subunit_name``, ``private_home_flag``, ``number_patient_samedayaddress``, ``gh_flag``, ``exam_method``, ``anesthetic_flag``
+     - Danh sách chứa thông tin:
+
+       ``patient_id``, ``record_id``, ``subunit_name``, ``private_home_flag``, ``number_patient_samedayaddress``, ``gh_flag``, ``exam_method``, ``anesthetic_flag``
    * - 2. Đọc danh sách các loại phí
      - Đọc file csv để lấy danh sách comment các loại phí
      - Lấy thông tin thành công
@@ -99,7 +101,7 @@ FR-Comment_Handel-1: Generate_comment
 
        ``patient_id``, ``record_id``, ``comment_id``, ``parent_code``, ``comment``, ``reliability``, ``feedback``, numerical_value, ``category_id``, ``priority``
 
-      Lưu comment
+       Lưu comment
      - Lưu thông tin
    * - 6. Kiểm tra độ ưu tiên
      - Kiểm tra cột ``priority`` trong bảng ``mst_fee_comment``
