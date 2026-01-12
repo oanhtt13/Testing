@@ -110,6 +110,7 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
        **Thì:**
 
        Bệnh nhân được tính phí hỗ trợ
+     - Lưu thông tin phí được update vào database
 
 
 FR-Selective_Comment-1: Implementing Selective Comment
