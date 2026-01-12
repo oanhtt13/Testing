@@ -28,7 +28,9 @@ FR-Comment_Handel-1: Generate_comment
    * - Description
      - Tạo comment tương ứng với từng loại phí mà khách hàng cần phải chi trả.
 
-       Lưu thông tin vào database
+       Mỗi bệnh nhân chỉ được tạo 1 comment
+
+       Lưu comment vào database
    * - Input
      - Database: ``mst_fee_comment``
 
@@ -91,18 +93,23 @@ FR-Comment_Handel-1: Generate_comment
        **Thì:**
 
        Gen comment theo cột ``comment`` tương ứng
-     - Gen comment
-   * - 5. Kiểm tra độ ưu tiên
+     - Lưu thông tin comment
+   * - 5. Gen comment
+     - Tạo comment theo cấu trúc sau:
+
+       ``patient_id``, ``record_id``, ``comment_id``, ``parent_code``, ``comment``, ``reliability``, ``feedback``, numerical_value, ``category_id``, ``priority``
+
+      Lưu comment
+     - Lưu thông tin
+   * - 6. Kiểm tra độ ưu tiên
      - Kiểm tra cột ``priority`` trong bảng ``mst_fee_comment``
 
        **Nếu:**
 
-       Comment nào có giá trị tại cột ``priority`` thấp nhất nhất
+       Bệnh nhân có thể đủ điều kiện để gen nhiều comment. Tuy nhiên chỉ lấy comment nào có giá trị tại cột ``priority`` thấp nhất nhất.
 
        **Thì:**
-       Comment đó được giữ lại
-     - Giữ lại comment
-   * - 6. Gen comment
-     - 
 
+       Comment đó được giữ lại có priotiry thấp nhất
 
+     - Mỗi bệnh nhân chỉ có 1 comment

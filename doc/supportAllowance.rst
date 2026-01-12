@@ -13,7 +13,7 @@ Mục đích
 Hệ thống hỗ trợ
 -----------------------
 
-:ref:`Google-Sheet-lable`: Trang quản lý  1 clinic. Khách hàng cung cấp. Tham khảo tại: :doc:`supportSystem`.
+Google-Sheet: Trang quản lý  1 clinic. Khách hàng cung cấp. Tham khảo tại: :doc:`supportSystem`.
 
 
 Logic tinh CSF
@@ -21,15 +21,18 @@ Logic tinh CSF
 
 Phí Hỗ trợ Toàn diện (CSF) được tính dựa trên các yếu tố sau:
 
+Điều kiện chính (độ ưu tiên cao nhất):
 * Mức độ hỗ trợ cần thiết cho bệnh nhân: ``要介護 3`` trở lên
 * Mức độ tự lập trong sinh hoạt hằng ngày của người cao tuổi mắc sa sút trí tuệ: ``Rank III`` trở lên
 
+Điều kiện phụ (chỉ được sử dụng khi điều kiện chính không đủ): thông tin được cung cấp tại :doc:`supportSystem`, mục ``包括的支援加算``.
 
 Functional Requirementd
 ------------------------
 
 FR-Support_Fee-1: Checking with priority conditions (Implementing)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Đây là phần tính năng đã có, các điều kiện này được ưu tiên hơn các điều kiện phía sau.
 
 ===============  =============================================================================================================================
 Content          Explain
@@ -71,6 +74,7 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Explain
    * - Description
      - Điều kiện chỉ được xét tới nếu sau FR-Support-Fee-1 trả về người bệnh không được tính phụ phí hỗ trợ hoàn diện. (``f24 = 0``)
+       Xét thêm điều kiện để tăng số lượng đối tượng được tính phí hỗ trợ.
    * - Input
      - Danh sách bệnh nhân không đủ điều kiện tính Phí Hỗ trợ Toàn diện từ FR-Support_Fee-1.
    * - Output
@@ -84,9 +88,34 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
 
        Update selective comment cho các trường hợp bệnh nhân đó.
 
+.. list-tabel:: **Business Logic**
+   :header-row: 1
+   :widths: 15 50 20
+
+   * - Step
+     - Action
+     - Business Acceptance Criteria
+   * - 1. Lấy danh sách bệnh nhân
+     - Lấy danh sách bệnh nhân được trả về sau model 2
+     - Lấy thành công danh sách
+   * - 2. Lọc danh sách bệnh nhân
+     - Chỉ lấy những bệnh nhân chưa đạt điều kiện chính của phí hỗ trợ.
+   * - 3. Đánh giá bệnh nhân
+     - Đọc trang Google Sheet.
+
+       **Nếu:**
+
+       Cột ``包括的支援加算`` không rỗng
+
+       **Thì:**
+
+       Bệnh nhân được tính phí hỗ trợ
+
 
 FR-Selective_Comment-1: Implementing Selective Comment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Thông tin chi tiết tại :doc:`selectiveComment`.
 
 .. list-table:: **Description**
    :header-rows: 1
@@ -105,5 +134,5 @@ FR-Selective_Comment-1: Implementing Selective Comment
    * - Preconditions
      - Tạo các điều kiện liên quan đến Phí Hỗ trợ Toàn diện trong hệ thống.
    * - Postconditions
-     - Can tpc
+     - Tạo thành công comment và lưu thông tin vào ``tbl_record``.
 
