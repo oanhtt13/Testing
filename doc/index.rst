@@ -10,7 +10,7 @@ Welcome to Medical Costs documentation!
    :maxdepth: 5
    :caption: Contents:
 
-   aler3.rst
+   alert3.rst
    Crawler.rst
    introduction.rst
    RecordofChange.rst

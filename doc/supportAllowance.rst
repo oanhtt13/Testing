@@ -100,17 +100,17 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Lấy danh sách bệnh nhân được trả về sau model 2
      - Lấy thành công danh sách
    * - 2. Lọc danh sách bệnh nhân
-     - Loại bỏ các bệnh nhân có ``f24 = 1`` (đã được tính phải bệnh hiểm nghéo)
+     - Loại bỏ các bệnh nhân có ``f24 = 1`` (đã được tính phải bệnh hiểm nghèo)
      - Chỉ lấy những bệnh nhân chưa đạt điều kiện chính của phí hỗ trợ.
    * - 3. Đánh giá bệnh nhân
      - Đọc trang Google Sheet.
 
        **Nếu:**
 
-       Cột ``包括的支援加算`` không rỗng (khách NULL)
+       Cột ``包括的支援加算`` không rỗng (khác NULL)
 
        **Thì:**
-
+       
        Bệnh nhân được tính phí hỗ trợ
      - Lưu thông tin phí được update vào database
 
