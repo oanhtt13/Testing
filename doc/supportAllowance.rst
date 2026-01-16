@@ -106,6 +106,23 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Đọc trang Google Sheet: **Nếu:** Cột ``包括的支援加算`` không rỗng (khác NULL) **Thì:** Bệnh nhân được tính phí hỗ trợ.
      - Lưu thông tin phí được update vào database
 
+.. list-table:: **Main Flow**
+   :header-rows: 1
+   :widths: 15 80 20
+
+   * - Step
+     - Action
+     - Business Acceptance Criteria
+   * - 1. Lấy danh sách bệnh nhân
+     - Hệ thống nhận danh sách bệnh nhân sau khi được lọc qua các điều kiện Alert 3
+     - Lấy thành công danh sách bệnh nhân
+   * - 2. Kiểm tra điều kiện
+     - Sử dụng model AI (``model 2``) giúp kiểm tra bệnh nhân có đủ điều kiện tính phí hỗ trợ toàn diện hay không
+     - Kiểm tra thành công bệnh nhân
+   * - 3. Xuất kết quả
+     - Hệ thống xuất kết quả kiểm tra Phí Hỗ trợ Toàn diện (CSF) cho từng bệnh nhân
+     - Lưu thông tin bệnh nhân có phí hỗ trợ vào database (``f24 = 1``)
+
 FR-Selective_Comment-1: Implementing Selective Comment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
