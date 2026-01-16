@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Allowance &mdash; Medical Costs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support System" href="supportSystem.html" />
+    <link rel="prev" title="Selective Comment" href="selectiveComment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Medical Costs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="alert3.html">Alert 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawler.html">Crawler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecordofChange.html">Record of Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="selectiveComment.html">Selective Comment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Support Allowance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#muc-dich">Mục đích</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dinh-nghia-phi-ho-tro-toan-dien-csf">Định nghĩa Phí Hỗ trợ Toàn diện (CSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#he-thong-ho-tro">Hệ thống hỗ trợ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logic-tinh-csf">Logic tinh CSF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functional-requirementd">Functional Requirementd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fr-support-fee-1-checking-with-priority-conditions-implementing">FR-Support_Fee-1: Checking with priority conditions (Implementing)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fr-support-fee-2-updating-comprehensive-support-fee-conditions">FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fr-selective-comment-1-implementing-selective-comment">FR-Selective_Comment-1: Implementing Selective Comment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="supportSystem.html">Support System</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Medical Costs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Support Allowance</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/supportAllowance.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="support-allowance">
+<h1>Support Allowance<a class="headerlink" href="#support-allowance" title="Link to this heading"></a></h1>
+<section id="muc-dich">
+<h2>Mục đích<a class="headerlink" href="#muc-dich" title="Link to this heading"></a></h2>
+<p>Đối với <code class="docutils literal notranslate"><span class="pre">包括的支援加算</span></code>, ngoài các yêu cầu hiện có, bổ sung thêm các điều kiện mới nhằm <strong>tăng số lượng bệnh nhân đủ điều kiện tính phí</strong>.
+Đồng thời, <strong>mở rộng chức năng nhập comment dạng lựa chọn</strong> dựa trên các điều kiện mới này.</p>
+</section>
+<section id="dinh-nghia-phi-ho-tro-toan-dien-csf">
+<h2>Định nghĩa Phí Hỗ trợ Toàn diện (CSF)<a class="headerlink" href="#dinh-nghia-phi-ho-tro-toan-dien-csf" title="Link to this heading"></a></h2>
+</section>
+<section id="he-thong-ho-tro">
+<h2>Hệ thống hỗ trợ<a class="headerlink" href="#he-thong-ho-tro" title="Link to this heading"></a></h2>
+<p>Google-Sheet: Trang quản lý  1 clinic. Khách hàng cung cấp. Tham khảo tại: <a class="reference internal" href="supportSystem.html"><span class="doc">Support System</span></a>.</p>
+</section>
+<section id="logic-tinh-csf">
+<h2>Logic tinh CSF<a class="headerlink" href="#logic-tinh-csf" title="Link to this heading"></a></h2>
+<p>Phí Hỗ trợ Toàn diện (CSF) được tính dựa trên các yếu tố sau:</p>
+<p>Điều kiện chính (độ ưu tiên cao nhất):
+* Mức độ hỗ trợ cần thiết cho bệnh nhân: <code class="docutils literal notranslate"><span class="pre">要介護</span> <span class="pre">3</span></code> trở lên
+* Mức độ tự lập trong sinh hoạt hằng ngày của người cao tuổi mắc sa sút trí tuệ: <code class="docutils literal notranslate"><span class="pre">Rank</span> <span class="pre">III</span></code> trở lên</p>
+<p>Điều kiện phụ (chỉ được sử dụng khi điều kiện chính không đủ): thông tin được cung cấp tại <a class="reference internal" href="supportSystem.html"><span class="doc">Support System</span></a>, mục <code class="docutils literal notranslate"><span class="pre">包括的支援加算</span></code>.</p>
+</section>
+<section id="functional-requirementd">
+<h2>Functional Requirementd<a class="headerlink" href="#functional-requirementd" title="Link to this heading"></a></h2>
+<section id="fr-support-fee-1-checking-with-priority-conditions-implementing">
+<h3>FR-Support_Fee-1: Checking with priority conditions (Implementing)<a class="headerlink" href="#fr-support-fee-1-checking-with-priority-conditions-implementing" title="Link to this heading"></a></h3>
+<p>Đây là phần tính năng đã có, các điều kiện này được ưu tiên hơn các điều kiện phía sau.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Content</p></th>
+<th class="head"><p>Explain</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p>Hệ thống sẽ kiểm tra các điều kiện ưu tiên để xác định xem bệnh nhân có đủ điều kiện nhận Phí Hỗ trợ Toàn diện hay không.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Dữ liệu bệnh nhân bao gồm mức độ hỗ trợ cần thiết và mức độ tự lập trong sinh hoạt hằng ngày.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>Kết quả kiểm tra Phí Hỗ trợ Toàn diện (CSF) - Đủ điều kiện hoặc Không đủ điều kiện (f24).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Sau khi bệnh nhân được lọc qua Alert 3</p></td>
+</tr>
+<tr class="row-even"><td><p>Preconditions</p></td>
+<td><p>Danh sách bệnh nhân không thuộc Alert 3 không rỗng.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Postconditions</p></td>
+<td><p>Hệ thống xác định được bệnh nhân có đủ điều kiện nhận Phí Hỗ trợ Toàn diện hay không.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text"><strong>Main Flow</strong></span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.0%" />
+<col style="width: 69.6%" />
+<col style="width: 17.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Action</p></th>
+<th class="head"><p>Business Acceptance Criteria</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Lấy danh sách bệnh nhân</p></li>
+</ol>
+</td>
+<td><p>Hệ thống nhận danh sách bệnh nhân sau khi được lọc qua các điều kiện Alert 3</p></td>
+<td><p>Lấy thành công danh sách bệnh nhân</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Kiểm tra điều kiện</p></li>
+</ol>
+</td>
+<td><p>Sử dụng model AI (<code class="docutils literal notranslate"><span class="pre">model</span> <span class="pre">2</span></code>) giúp kiểm tra bệnh nhân có đủ điều kiện tính phí hỗ trợ toàn diện hay không</p></td>
+<td><p>Kiểm tra thành công bệnh nhân</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Xuất kết quả</p></li>
+</ol>
+</td>
+<td><p>Hệ thống xuất kết quả kiểm tra Phí Hỗ trợ Toàn diện (CSF) cho từng bệnh nhân</p></td>
+<td><p>Lưu thông tin bệnh nhân có phí hỗ trợ vào database (<code class="docutils literal notranslate"><span class="pre">f24</span> <span class="pre">=</span> <span class="pre">1</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fr-support-fee-2-updating-comprehensive-support-fee-conditions">
+<h3>FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions<a class="headerlink" href="#fr-support-fee-2-updating-comprehensive-support-fee-conditions" title="Link to this heading"></a></h3>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text"><strong>Description</strong></span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.0%" />
+<col style="width: 87.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Content</p></th>
+<th class="head"><p>Explain</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p>Điều kiện chỉ được xét tới nếu sau FR-Support-Fee-1 trả về người bệnh không được tính phụ phí hỗ trợ hoàn diện. (<code class="docutils literal notranslate"><span class="pre">f24</span> <span class="pre">=</span> <span class="pre">0</span></code>)</p>
+<p>Xét thêm điều kiện để tăng số lượng đối tượng được tính phí hỗ trợ.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Danh sách bệnh nhân không đủ điều kiện tính Phí Hỗ trợ Toàn diện từ FR-Support_Fee-1.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>Danh sách các bệnh nhân đạt điều kiện tính phụ phí hỗ trợ toàn diện theo điều kiện bổ sung.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Sau khi chạy xong model 2.</p></td>
+</tr>
+<tr class="row-even"><td><p>Preconditions</p></td>
+<td><p>Thông tin cột <code class="docutils literal notranslate"><span class="pre">包括的支援加算</span></code> của trang Google Sheet được cập nhật.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Postconditions</p></td>
+<td><p>Các bệnh nhân đủ điều kiện 2 được update trạng thái mới (<code class="docutils literal notranslate"><span class="pre">tbl_record</span></code>)</p>
+<p>Update selective comment cho các trường hợp bệnh nhân đó.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text"><strong>Main Flow</strong></span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.0%" />
+<col style="width: 69.6%" />
+<col style="width: 17.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Action</p></th>
+<th class="head"><p>Business Acceptance Criteria</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Lấy danh sách bệnh nhân</p></li>
+</ol>
+</td>
+<td><p>Lấy danh sách bệnh nhân được trả về sau model 2</p></td>
+<td><p>Lấy thành công danh sách</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Lọc danh sách bệnh nhân</p></li>
+</ol>
+</td>
+<td><p>Loại bỏ các bệnh nhân có <code class="docutils literal notranslate"><span class="pre">f24</span> <span class="pre">=</span> <span class="pre">1</span></code> (đã được tính phải bệnh hiểm nghèo)</p></td>
+<td><p>Chỉ lấy những bệnh nhân chưa đạt điều kiện chính của phí hỗ trợ.</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Xuất kết quả3. Xuất kết quả</p></li>
+</ol>
+</td>
+<td><p>Đọc trang Google Sheet:</p>
+<p><strong>Nếu:</strong> Cột <code class="docutils literal notranslate"><span class="pre">包括的支援加算</span></code> không rỗng (khác NULL)</p>
+<p><strong>Thì:</strong> Bệnh nhân được tính phí hỗ trợ.</p>
+</td>
+<td><p>Lưu thông tin phí được update vào database</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fr-selective-comment-1-implementing-selective-comment">
+<h3>FR-Selective_Comment-1: Implementing Selective Comment<a class="headerlink" href="#fr-selective-comment-1-implementing-selective-comment" title="Link to this heading"></a></h3>
+<p>Thông tin chi tiết tại <a class="reference internal" href="selectiveComment.html"><span class="doc">Selective Comment</span></a>.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text"><strong>Description</strong></span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.0%" />
+<col style="width: 87.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Content</p></th>
+<th class="head"><p>Explain</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p>Hỗ trợ chức năng nhập comment dạng lựa chọn cho người dùng dành cho các loại phí.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Thông tin trong bảng <code class="docutils literal notranslate"><span class="pre">tbl_item</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>Giao diện nhập comment dạng lựa chọn cho người dùng.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Khi người dùng truy cập vào phần nhập liệu liên quan đến Phí Hỗ trợ Toàn diện.</p></td>
+</tr>
+<tr class="row-even"><td><p>Preconditions</p></td>
+<td><p>Tạo các điều kiện liên quan đến Phí Hỗ trợ Toàn diện trong hệ thống.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Postconditions</p></td>
+<td><p>Tạo thành công comment và lưu thông tin vào <code class="docutils literal notranslate"><span class="pre">tbl_record</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="selectiveComment.html" class="btn btn-neutral float-left" title="Selective Comment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="supportSystem.html" class="btn btn-neutral float-right" title="Support System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

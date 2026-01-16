@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selective Comment &mdash; Medical Costs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support Allowance" href="supportAllowance.html" />
+    <link rel="prev" title="Record of Change" href="RecordofChange.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Medical Costs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="alert3.html">Alert 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawler.html">Crawler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecordofChange.html">Record of Change</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Selective Comment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#muc-dich">Mục đích</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tien-dieu-kien">Tiền điều kiện</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#function-requirement">Function Requirement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fr-comment-handel-1-generate-comment">FR-Comment_Handel-1: Generate_comment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="supportAllowance.html">Support Allowance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supportSystem.html">Support System</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Medical Costs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Selective Comment</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/selectiveComment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selective-comment">
+<h1>Selective Comment<a class="headerlink" href="#selective-comment" title="Link to this heading"></a></h1>
+<section id="muc-dich">
+<h2>Mục đích<a class="headerlink" href="#muc-dich" title="Link to this heading"></a></h2>
+<p>Tính năng tạo comment cho từng loại phí được áp dụng cho người khám bệnh.</p>
+</section>
+<section id="tien-dieu-kien">
+<h2>Tiền điều kiện<a class="headerlink" href="#tien-dieu-kien" title="Link to this heading"></a></h2>
+<p>Danh sách các comment cụ thể cho từng loại phí phải được tạo trước đó tại bảng <code class="docutils literal notranslate"><span class="pre">mst_fee_comment</span></code> trên database</p>
+</section>
+<section id="function-requirement">
+<h2>Function Requirement<a class="headerlink" href="#function-requirement" title="Link to this heading"></a></h2>
+<section id="fr-comment-handel-1-generate-comment">
+<h3>FR-Comment_Handel-1: Generate_comment<a class="headerlink" href="#fr-comment-handel-1-generate-comment" title="Link to this heading"></a></h3>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text"><strong>Generate Comment</strong></span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 27.3%" />
+<col style="width: 72.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Content</p></th>
+<th class="head"><p>Detail</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p>Tạo comment tương ứng với từng loại phí mà khách hàng cần phải chi trả.</p>
+<p>Mỗi bệnh nhân chỉ được tạo 1 comment</p>
+<p>Lưu comment vào database</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Database: <code class="docutils literal notranslate"><span class="pre">mst_fee_comment</span></code></p>
+<p>Danh sách bệnh nhân và các loại phí bệnh nhân cần phải chi trả</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trigger</p></td>
+<td><p>Khi lấy được thông tin tính phí của bệnh nhân</p></td>
+</tr>
+<tr class="row-even"><td><p>Preconditions</p></td>
+<td><p>Thông tin tại bảng <code class="docutils literal notranslate"><span class="pre">mst_fee_comment</span></code> phải được cập nhật</p>
+<p>Thông tin tại bảng trên được đọc thành công và lưu lại vào file <code class="docutils literal notranslate"><span class="pre">/tmp/data/master_data/mst_fee_comments.csv</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Postconditions</p></td>
+<td><p>Comment tương ứng phải được cập nhật trên database, tại bảng <code class="docutils literal notranslate"><span class="pre">tbl_record</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text"><strong>Business Flow</strong></span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Acception</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Cung cấp danh sách bệnh nhân kèm các loại phí</p></li>
+</ol>
+</td>
+<td><p>Nhập vào dataframe chứa thông tin danh sách bệnh nhân</p></td>
+<td><p>Danh sách chứa thông tin:</p>
+<p><code class="docutils literal notranslate"><span class="pre">patient_id</span></code>, <code class="docutils literal notranslate"><span class="pre">record_id</span></code>, <code class="docutils literal notranslate"><span class="pre">subunit_name</span></code>, <code class="docutils literal notranslate"><span class="pre">private_home_flag</span></code>, <code class="docutils literal notranslate"><span class="pre">number_patient_samedayaddress</span></code>, <code class="docutils literal notranslate"><span class="pre">gh_flag</span></code>, <code class="docutils literal notranslate"><span class="pre">exam_method</span></code>, <code class="docutils literal notranslate"><span class="pre">anesthetic_flag</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Đọc danh sách các loại phí</p></li>
+</ol>
+</td>
+<td><p>Đọc file csv để lấy danh sách comment các loại phí</p></td>
+<td><p>Lấy thông tin thành công</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Kiểm tra các loại phí bệnh nhân cần chi trả</p></li>
+</ol>
+</td>
+<td><p>Kiểm tra các loại phí bệnh nhân cần chi trả, encoder phí sang code tương ứng</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Kiểm tra phí có nhiều loại comment hay không</p></li>
+</ol>
+</td>
+<td><p>Kiểm tra cột <code class="docutils literal notranslate"><span class="pre">need_condition</span></code> của file <code class="docutils literal notranslate"><span class="pre">csv</span></code> để lấy thông tin</p>
+<p><strong>Nếu:</strong></p>
+<p>need_condition = <code class="docutils literal notranslate"><span class="pre">no</span></code></p>
+<p><strong>Thì:</strong></p>
+<p>Lấy comment tương ứng với phí tại cột <code class="docutils literal notranslate"><span class="pre">comment</span></code></p>
+<p><strong>Nếu:</strong></p>
+<p>need_condition = <code class="docutils literal notranslate"><span class="pre">yes</span></code></p>
+<p><strong>Thì:</strong></p>
+<p>Kiểm tra cột <code class="docutils literal notranslate"><span class="pre">condition</span></code> rồi sang bước 4.1</p>
+</td>
+<td><p>Lấy thành công thông tin</p></td>
+</tr>
+<tr class="row-even"><td><p>4.1 Kiểm tra điều kiện generate comment</p></td>
+<td><p>Kiểm tra cột <code class="docutils literal notranslate"><span class="pre">condition</span></code> trong file <code class="docutils literal notranslate"><span class="pre">csv</span></code></p>
+<p><strong>Nếu:</strong></p>
+<p>Kiểm tra điều kiện trả về <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<p><strong>Thì:</strong></p>
+<p>Gen comment theo cột <code class="docutils literal notranslate"><span class="pre">comment</span></code> tương ứng</p>
+</td>
+<td><p>Lưu thông tin comment</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="5">
+<li><p>Gen comment</p></li>
+</ol>
+</td>
+<td><p>Tạo comment theo cấu trúc sau:</p>
+<p><code class="docutils literal notranslate"><span class="pre">patient_id</span></code>, <code class="docutils literal notranslate"><span class="pre">record_id</span></code>, <code class="docutils literal notranslate"><span class="pre">comment_id</span></code>, <code class="docutils literal notranslate"><span class="pre">parent_code</span></code>, <code class="docutils literal notranslate"><span class="pre">comment</span></code>, <code class="docutils literal notranslate"><span class="pre">reliability</span></code>, <code class="docutils literal notranslate"><span class="pre">feedback</span></code>, numerical_value, <code class="docutils literal notranslate"><span class="pre">category_id</span></code>, <code class="docutils literal notranslate"><span class="pre">priority</span></code></p>
+<p>Lưu comment</p>
+</td>
+<td><p>Lưu thông tin</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="6">
+<li><p>Kiểm tra độ ưu tiên</p></li>
+</ol>
+</td>
+<td><p>Kiểm tra cột <code class="docutils literal notranslate"><span class="pre">priority</span></code> trong bảng <code class="docutils literal notranslate"><span class="pre">mst_fee_comment</span></code></p>
+<p><strong>Nếu:</strong></p>
+<p>Bệnh nhân có thể đủ điều kiện để gen nhiều comment. Tuy nhiên chỉ lấy comment nào có giá trị tại cột <code class="docutils literal notranslate"><span class="pre">priority</span></code> thấp nhất nhất.</p>
+<p><strong>Thì:</strong></p>
+<p>Comment đó được giữ lại có priotiry thấp nhất</p>
+</td>
+<td><p>Mỗi bệnh nhân chỉ có 1 comment</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="RecordofChange.html" class="btn btn-neutral float-left" title="Record of Change" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="supportAllowance.html" class="btn btn-neutral float-right" title="Support Allowance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright workshop participant.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
