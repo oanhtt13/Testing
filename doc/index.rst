@@ -10,10 +10,10 @@ Welcome to Medical Costs documentation!
    :maxdepth: 5
    :caption: Contents:
 
-   RecordofChange.rst
-   introduction.rst
-   supportSystem.rst
    aler3.rst
    Crawler.rst
+   introduction.rst
+   RecordofChange.rst
    selectiveComment.rst
    supportAllowance.rst
+   supportSystem.rst

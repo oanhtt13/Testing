@@ -74,6 +74,7 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Explain
    * - Description
      - Điều kiện chỉ được xét tới nếu sau FR-Support-Fee-1 trả về người bệnh không được tính phụ phí hỗ trợ hoàn diện. (``f24 = 0``)
+
        Xét thêm điều kiện để tăng số lượng đối tượng được tính phí hỗ trợ.
    * - Input
      - Danh sách bệnh nhân không đủ điều kiện tính Phí Hỗ trợ Toàn diện từ FR-Support_Fee-1.
@@ -99,13 +100,14 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Lấy danh sách bệnh nhân được trả về sau model 2
      - Lấy thành công danh sách
    * - 2. Lọc danh sách bệnh nhân
+     - Loại bỏ các bệnh nhân có ``f24 = 1`` (đã được tính phải bệnh hiểm nghéo)
      - Chỉ lấy những bệnh nhân chưa đạt điều kiện chính của phí hỗ trợ.
    * - 3. Đánh giá bệnh nhân
      - Đọc trang Google Sheet.
 
        **Nếu:**
 
-       Cột ``包括的支援加算`` không rỗng
+       Cột ``包括的支援加算`` không rỗng (khách NULL)
 
        **Thì:**
 
