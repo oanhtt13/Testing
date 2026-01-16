@@ -103,7 +103,11 @@ FR-Support_Fee-2: Updating Comprehensive Support Fee Conditions
      - Loại bỏ các bệnh nhân có ``f24 = 1`` (đã được tính phải bệnh hiểm nghèo)
      - Chỉ lấy những bệnh nhân chưa đạt điều kiện chính của phí hỗ trợ.
    * - 3. Xuất kết quả3. Xuất kết quả
-     - Đọc trang Google Sheet: **Nếu:** Cột ``包括的支援加算`` không rỗng (khác NULL) **Thì:** Bệnh nhân được tính phí hỗ trợ.
+     - Đọc trang Google Sheet:
+
+       **Nếu:** Cột ``包括的支援加算`` không rỗng (khác NULL)
+
+       **Thì:** Bệnh nhân được tính phí hỗ trợ.
      - Lưu thông tin phí được update vào database
 
 FR-Selective_Comment-1: Implementing Selective Comment
