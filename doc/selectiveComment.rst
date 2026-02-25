@@ -28,9 +28,7 @@ FR-Comment_Handel-1: Generate_comment
    * - Description
      - Tạo comment tương ứng với từng loại phí mà khách hàng cần phải chi trả.
 
-       Mỗi bệnh nhân chỉ được tạo 1 comment
-
-       Lưu comment vào database
+       Lưu comment vào database.
    * - Input
      - Database: ``mst_fee_comment``
 
@@ -44,6 +42,8 @@ FR-Comment_Handel-1: Generate_comment
      - Thông tin tại bảng ``mst_fee_comment`` phải được cập nhật
 
        Thông tin tại bảng trên được đọc thành công và lưu lại vào file ``/tmp/data/master_data/mst_fee_comments.csv``
+
+       Bệnh nhân không có ``lert 3 flag``
    * - Postconditions
      - Comment tương ứng phải được cập nhật trên database, tại bảng ``tbl_record``
 
@@ -61,12 +61,12 @@ FR-Comment_Handel-1: Generate_comment
 
        ``patient_id``, ``record_id``, ``subunit_name``, ``private_home_flag``, ``number_patient_samedayaddress``, ``gh_flag``, ``exam_method``, ``anesthetic_flag``
    * - 2. Đọc danh sách các loại phí
-     - Đọc file csv để lấy danh sách comment các loại phí
+     - Đọc file csv (``MST_FEE_COMMENTS``) để lấy danh sách comment các loại phí
      - Lấy thông tin thành công
    * - 3. Kiểm tra các loại phí bệnh nhân cần chi trả
-     - Kiểm tra các loại phí bệnh nhân cần chi trả, encoder phí sang code tương ứng
+     - Kiểm tra các loại phí bệnh nhân cần chi trả, mapping phí sang mã code tương ứng
      - None
-   * - 4. Kiểm tra phí có nhiều loại comment hay không
+   * - 4. Kiểm tra phí có cần kiểm tra mục ``condition`` hay không
      - Kiểm tra cột ``need_condition`` của file ``csv`` để lấy thông tin
 
        **Nếu:**
@@ -84,6 +84,14 @@ FR-Comment_Handel-1: Generate_comment
        **Thì:**
 
        Kiểm tra cột ``condition`` rồi sang bước 4.1
+
+       **Nếu:**
+
+       need_condition = ``notyet``
+
+       **Thì:**
+
+       Bỏ qua (Null)
      - Lấy thành công thông tin
    * - 4.1 Kiểm tra điều kiện generate comment
      - Kiểm tra cột ``condition`` trong file ``csv``
@@ -95,22 +103,17 @@ FR-Comment_Handel-1: Generate_comment
        **Thì:**
 
        Gen comment theo cột ``comment`` tương ứng
-     - Lưu thông tin comment
+     - Lưu thông tin comment (nếu comment khác None)
    * - 5. Gen comment
      - Tạo comment theo cấu trúc sau:
 
-       ``patient_id``, ``record_id``, ``comment_id``, ``parent_code``, ``comment``, ``reliability``, ``feedback``, numerical_value, ``category_id``, ``priority``
+       ``patient_id``, ``record_id``, ``comment_id``, ``parent_code``, ``comment``, ``reliability``, ``feedback``, ``numerical_value``, ``category_id``, ``priority``
 
        Lưu comment
-     - Lưu thông tin
-   * - 6. Kiểm tra độ ưu tiên
-     - Kiểm tra cột ``priority`` trong bảng ``mst_fee_comment``
+     - Lưu thông tin vào dataframe
+   * - 6. Nhóm dữ liệu dựa trên ``patient_id``, ``record_id``, ``parent_code``
+     - Nhóm những dataframe mới tạo vào nhóm có chung ``patient_id``, ``record_id``, ``parent_code``
 
        **Nếu:**
 
-       Bệnh nhân có thể đủ điều kiện để gen nhiều comment. Tuy nhiên chỉ lấy comment nào có giá trị tại cột ``priority`` thấp nhất nhất.
-
-       **Thì:**
-
-       Comment đó được giữ lại có priotiry thấp nhất
-     - Mỗi bệnh nhân chỉ có 1 comment
+       Giữ lại dataframe có ``priority`` nhỏ nhất. (giữ lại tất cả các dataframe có priority giống nhau)
