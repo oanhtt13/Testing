@@ -43,9 +43,9 @@ FR-Comment_Handel-1: Generate_comment
 
        Thông tin tại bảng trên được đọc thành công và lưu lại vào file ``/tmp/data/master_data/mst_fee_comments.csv``
 
-       Bệnh nhân không có ``lert 3 flag``
+       Bệnh nhân không có ``alert 3 flag``
    * - Postconditions
-     - Comment tương ứng phải được cập nhật trên database, tại bảng ``tbl_record``
+     - Comment tương ứng phải được cập nhật trên database, tại bảng ``tbl_item``
 
 
 .. list-table:: **Business Flow**
@@ -56,12 +56,12 @@ FR-Comment_Handel-1: Generate_comment
      - Description
      - Acception
    * - 1. Cung cấp danh sách bệnh nhân kèm các loại phí
-     - Nhập vào dataframe chứa thông tin danh sách record của từng bệnh nhân kèm thông tin các phí mà bệnh nhân cần phải chi trả.
+     - Nhập vào dataframe chứa thông tin danh sách record của từng bệnh nhân kèm thông tin các phí mà bệnh nhân cần phải chi trả tại thời điểm gen comment.
      - Danh sách chứa thông tin:
 
        ``patient_id``, ``record_id``, ``subunit_name``, ``private_home_flag``, ``number_patient_samedayaddress``, ``gh_flag``, ``exam_method``, ``anesthetic_flag``
    * - 2. Đọc danh sách các loại phí
-     - Đọc file csv (``MST_FEE_COMMENTS``) để lấy danh sách comment các loại phí
+     - Đọc bảng ``mst_fee_comments`` trong database và lưu file csv để lấy thông tin comment các loại phí.
      - Lấy thông tin thành công
    * - 3. Kiểm tra các loại phí bệnh nhân cần chi trả
      - Kiểm tra các loại phí bệnh nhân cần chi trả, mapping phí sang mã code tương ứng
@@ -117,4 +117,4 @@ FR-Comment_Handel-1: Generate_comment
        **Nếu:**
 
        Giữ lại dataframe có ``priority`` nhỏ nhất. 
-     - Giữ lại tất cả các comment trong dataframe có priority giống nhau.
+     - Giữ lại tất cả các comment trong dataframe có priority nhỏ nhất và giống nhau.
