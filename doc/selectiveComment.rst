@@ -114,7 +114,5 @@ FR-Comment_Handel-1: Generate_comment
    * - 6. Nhóm dữ liệu dựa trên ``patient_id``, ``record_id``, ``parent_code``
      - Nhóm những dataframe mới tạo vào nhóm có chung ``patient_id``, ``record_id``, ``parent_code``
 
-       **Nếu:**
-
        Giữ lại dataframe có ``priority`` nhỏ nhất. 
      - Giữ lại tất cả các comment trong dataframe có priority nhỏ nhất và giống nhau.
