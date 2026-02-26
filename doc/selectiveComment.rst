@@ -56,7 +56,7 @@ FR-Comment_Handel-1: Generate_comment
      - Description
      - Acception
    * - 1. Cung cấp danh sách bệnh nhân kèm các loại phí
-     - Nhập vào dataframe chứa thông tin danh sách bệnh nhân
+     - Nhập vào dataframe chứa thông tin danh sách record của từng bệnh nhân kèm thông tin các phí mà bệnh nhân cần phải chi trả.
      - Danh sách chứa thông tin:
 
        ``patient_id``, ``record_id``, ``subunit_name``, ``private_home_flag``, ``number_patient_samedayaddress``, ``gh_flag``, ``exam_method``, ``anesthetic_flag``
@@ -116,4 +116,5 @@ FR-Comment_Handel-1: Generate_comment
 
        **Nếu:**
 
-       Giữ lại dataframe có ``priority`` nhỏ nhất. (giữ lại tất cả các dataframe có priority giống nhau)
+       Giữ lại dataframe có ``priority`` nhỏ nhất. 
+     - Giữ lại tất cả các comment trong dataframe có priority giống nhau.
